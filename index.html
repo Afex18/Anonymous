@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anonymous Confessions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+
+    <header>
+      <div class="icon">🕯️</div>
+      <h1>Anonymous Confessions</h1>
+      <p class="subtitle">Say what you've always wanted to say. No name. No trace.</p>
+    </header>
+
+    <section class="form-section">
+      <form id="confession-form">
+
+        <div class="field">
+          <label for="message">Your confession</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your confession here..."
+            maxlength="1000"
+            required
+          ></textarea>
+          <span class="char-count"><span id="count">0</span> / 1000</span>
+        </div>
+
+        <button type="submit" id="send-btn">
+          Send anonymously
+        </button>
+
+      </form>
+
+      <div id="success-msg" class="hidden">
+        <span>🕯️</span>
+        <p>Your confession has been sent into the dark.</p>
+      </div>
+
+      <div id="error-msg" class="hidden">
+        <p>Something went wrong. Please try again.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
